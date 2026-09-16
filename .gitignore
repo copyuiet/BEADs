@@ -1,0 +1,41 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# ---------- 运行产物（由持久卷提供，绝不入库）----------
+runtime/
+!runtime/.gitkeep
+!runtime/uploads/
+!runtime/outputs/
+runtime/uploads/*
+runtime/outputs/*
+!runtime/uploads/.gitkeep
+!runtime/outputs/.gitkeep
+
+# ---------- 数据库与本地数据 ----------
+# 注意：包含真实账号、密码摘要与私信内容，一旦提交就是公开泄露
+*.db
+*.db-wal
+*.db-shm
+*.sqlite3
+
+# ---------- 前端 ----------
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+*.tsbuildinfo
+
+# ---------- 环境变量 ----------
+.env
+.env.local
+.env.*.local
+
+# ---------- 工具与编辑器 ----------
+.workbuddy/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

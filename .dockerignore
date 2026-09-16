@@ -1,0 +1,28 @@
+# 构建上下文瘦身：这些目录不会进入镜像
+
+# 运行产物（本地跑过服务就会生成，体积大且不该进镜像）
+runtime/
+
+# 前端依赖与本地构建产物（镜像内会重新构建）
+frontend/node_modules/
+frontend/dist/
+
+# Python 缓存
+**/__pycache__/
+**/*.py[cod]
+
+# 虚拟环境
+.venv/
+venv/
+
+# 版本控制与编辑器
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# 说明文档（镜像里不需要，减小上下文）
+README.md
+DEPLOY.md
+requirements-dev.txt
+*.pptx
